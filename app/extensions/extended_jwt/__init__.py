@@ -5,6 +5,7 @@ from loguru import logger
 
 jwt = JWTManager()
 
+
 @jwt.unauthorized_loader
 def unauthorized_callback(e):
     logger.error('未受权的访问')
@@ -15,6 +16,7 @@ def unauthorized_callback(e):
     response.status_code = 401
     return response
 
+
 @jwt.expired_token_loader
 def token_expired():
     response = jsonify({
@@ -24,6 +26,7 @@ def token_expired():
     logger.warning('登录过期')
     response.status_code = 401
     return response
+
 
 @jwt.user_claims_loader
 def add_claims_to_access_token(identity):
@@ -37,6 +40,7 @@ def add_claims_to_access_token(identity):
     else:
         return {}
 
+
 @jwt.token_in_blacklist_loader
 def check_if_token_in_blacklist(decrypted_token):
     check = is_token_revoked(decrypted_token)
@@ -44,6 +48,7 @@ def check_if_token_in_blacklist(decrypted_token):
         return True
     else:
         return False
+
 
 @jwt.user_loader_callback_loader
 def get_user(identity):
@@ -54,6 +59,7 @@ def get_user(identity):
     else:
         print(identity)
         abort(401)
+
 
 @jwt.user_loader_error_loader
 def fail_load_user(identity):

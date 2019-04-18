@@ -32,6 +32,14 @@ version = "1.4.0"
 colorama = "*"
 
 [[package]]
+category = "main"
+description = "A pluggable API specification generator. Currently supports the OpenAPI Specification (f.k.a. the Swagger specification)."
+name = "apispec"
+optional = false
+python-versions = "*"
+version = "1.2.0"
+
+[[package]]
 category = "dev"
 description = "Disable App Nap on OS X 10.9"
 marker = "python_version >= \"3.4\" and sys_platform == \"darwin\" or sys_platform == \"darwin\""
@@ -111,6 +119,14 @@ name = "colorama"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.4.1"
+
+[[package]]
+category = "main"
+description = "Simple library for color and formatting to terminal"
+name = "colored"
+optional = false
+python-versions = "*"
+version = "1.3.93"
 
 [[package]]
 category = "main"
@@ -762,6 +778,17 @@ version = "0.1.7"
 
 [[package]]
 category = "main"
+description = "Declarative parsing and validation of HTTP request objects, with built-in support for popular web frameworks, including Flask, Django, Bottle, Tornado, Pyramid, webapp2, Falcon, and aiohttp."
+name = "webargs"
+optional = false
+python-versions = "*"
+version = "5.3.0"
+
+[package.dependencies]
+marshmallow = ">=2.15.2"
+
+[[package]]
+category = "main"
 description = "The comprehensive WSGI web application library."
 name = "werkzeug"
 optional = false
@@ -780,13 +807,14 @@ version = "0.14.0"
 h11 = ">=0.8.0,<0.9.0"
 
 [metadata]
-content-hash = "094119a7e13674b287016836efde3f05da796c5a2113cba00ee375a56ea642b2"
+content-hash = "e5694904be409bced01ec5d22680daba740881b6030377fa80aa9ace8fc4ff83"
 python-versions = "^3.7"
 
 [metadata.hashes]
 aiofiles = ["021ea0ba314a86027c166ecc4b4c07f2d40fc0f4b3a950d1868a0f2571c2bbee", "1e644c2573f953664368de28d2aa4c89dfd64550429d0c27c4680ccd3aa4985d"]
 alembic = ["40b9a619aa5f25ea1e1508adcda88b33704ef28e02c9cfa6471e5c772ecf0829"]
 ansimarkup = ["06365e3ef89a12734fc408b2449cb4642d5fe2e603e95e7296eff9e98a0fe0b4", "174d920481416cec8d5a707af542d6fba25a1df1c21d8996479c32ba453649a4"]
+apispec = ["8f89282a5474e449ce158b3c9f7e3948a207c89d5eb624231bbb6ea87fcf9f4a", "cc1e5454df092b6d0ae84f29cf6b4cb4b552a4d76255f6e7f2e2f123102b0dcb"]
 appnope = ["5b26757dc6f79a3b7dc9fab95359328d5747fcb2409d331ea66d0272b90ab2a0", "8b995ffe925347a2138d7ac0fe77155e4311a0ea6d6da4f5128fe4b3cbe5ed71"]
 arrow = ["3397e5448952e18e1295bf047014659effa5ae8da6a5371d37ff0ddc46fa6872", "6f54d9f016c0b7811fac9fb8c2c7fa7421d80c54dbdd75ffb12913c55db60b8a"]
 atomicwrites = ["03472c30eb2c5d1ba9227e4c2ca66ab8287fbfbbda3888aa93dc2e28fc6811b4", "75a9445bac02d8d058d5e1fe689654ba5a6556a1dfd8ce6ec55a0ed79866cfa6"]
@@ -796,6 +824,7 @@ better-exceptions-fork = ["5f0983da51e956dbdaf8b9a3d10e2774b382ce6c6ff2e54685c33
 blinker = ["471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6"]
 click = ["2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13", "5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"]
 colorama = ["05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d", "f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"]
+colored = ["8296ea990e3f6b7822f44eec21408b126dfb9c1c031306b859e3f7d46cc27075"]
 coloredlogs = ["34fad2e342d5a559c31b6c889e8d14f97cb62c47d9a2ae7b5ed14ea10a79eff8", "b869a2dda3fa88154b9dd850e27828d8755bfab5a838a1c97fbc850c6e377c36"]
 decorator = ["86156361c50488b84a3f148056ea716ca587df2f0de1d34750d35c21312725de", "f069f3a01830ca754ba5258fde2278454a0b5b79e0d7f5c13b3b97e57d4acff6"]
 fast-json = ["a1e706410cdc1b7bcab14383cdab9e093d7ca872ff761927c162bd7fda83ad2f"]
@@ -857,5 +886,6 @@ typing = ["4027c5f6127a6267a435201981ba156de91ad0d1d98e9ddc2aa173453453492d", "5
 typing-extensions = ["07b2c978670896022a43c4b915df8958bec4a6b84add7f2c87b2b728bda3ba64", "f3f0e67e1d42de47b5c67c32c9b26641642e9170fe7e292991793705cd5fef7c", "fb2cd053238d33a8ec939190f30cfd736c00653a85a2919415cecf7dc3d9da71"]
 ujson = ["f66073e5506e91d204ab0c614a148d5aa938bdbf104751be66f8ad7a222f5f86"]
 wcwidth = ["3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e", "f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"]
+webargs = ["81481c249b2c9c00c1d519e08820e2a61d6b0768d842d78d114c474c172f3ab8", "c4d8ec38b2d50821e795bf4619ff9dd95589330811a4fbeac0c32d8ddcfa375d", "d531eee77274133b54fd1171b2a58498bd71c498d7fe38d2c864f24284f32ed1"]
 werkzeug = ["0a73e8bb2ff2feecfc5d56e6f458f5b99290ef34f565ffb2665801ff7de6af7a", "7fad9770a8778f9576693f0cc29c7dcc36964df916b83734f4431c0e612a7fbc"]
 wsproto = ["55c3da870460e8838b2fbe4d10f3accc0cea3a13d5e8dbbdc6da5d537d6d44dc", "c7f35e0af250b9f25583b090039eb2159a079fbe71b7daf86cc3ddcd2f3a70b3"]
