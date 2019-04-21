@@ -721,6 +721,18 @@ version = "0.0.2"
 SqlAlchemy = "*"
 
 [[package]]
+category = "main"
+description = "Various utility functions for SQLAlchemy."
+name = "sqlalchemy-utils"
+optional = false
+python-versions = "*"
+version = "0.33.11"
+
+[package.dependencies]
+SQLAlchemy = ">=1.0"
+six = "*"
+
+[[package]]
 category = "dev"
 description = "ANSII Color formatting for output in terminal."
 name = "termcolor"
@@ -807,7 +819,7 @@ version = "0.14.0"
 h11 = ">=0.8.0,<0.9.0"
 
 [metadata]
-content-hash = "e5694904be409bced01ec5d22680daba740881b6030377fa80aa9ace8fc4ff83"
+content-hash = "994699eabad094f11acdef40d2c586fd78a9607e42382d74e740730464547da5"
 python-versions = "^3.7"
 
 [metadata.hashes]
@@ -880,6 +892,7 @@ six = ["3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c", "d16a
 sortedcontainers = ["974e9a32f56b17c1bac2aebd9dcf197f3eb9cd30553c5852a3187ad162e1a03a", "d9e96492dd51fae31e60837736b38fe42a187b5404c16606ff7ee7cd582d4c60"]
 sqlalchemy = ["91c54ca8345008fceaec987e10924bf07dcab36c442925357e5a467b36a38319"]
 sqlalchemy-pagination = ["89141cf3ea132c2713be882e22e42b3224570c8a5a62c0d76ef34647073f9655", "b199942239ac25aee7bb77fa5f1dd7a8cf3558a1d26e174cdd9463cfda45feec"]
+sqlalchemy-utils = ["3f1cb542cf0549a0de508d4919f3ad693a36230bf4cd13fdd6253549fec71182"]
 termcolor = ["1d6d69ce66211143803fbc56652b41d73b4a400a2891d7bf7a1cdf4c02de613b"]
 traitlets = ["9c4bd2d267b7153df9152698efb1050a5d84982d3384a37b2c1f7723ba3e7835", "c6cb5e6f57c5a9bdaa40fa71ce7b4af30298fbab9ece9815b5d995ab6217c7d9"]
 typing = ["4027c5f6127a6267a435201981ba156de91ad0d1d98e9ddc2aa173453453492d", "57dcf675a99b74d64dacf6fba08fb17cf7e3d5fdff53d4a30ea2a5e7e52543d4", "a4c8473ce11a65999c8f59cb093e70686b6c84c98df58c1dae9b3b196089858a"]

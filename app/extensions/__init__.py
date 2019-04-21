@@ -1,16 +1,16 @@
 from flask_marshmallow import Marshmallow
-from flask_sqlalchemy import SQLAlchemy
+from .flask_sqlalchemy import db
 
 from .extended_jwt import jwt
+from .logging import Logging
 
 ma = Marshmallow()
-
-db = SQLAlchemy()
-
+logging = Logging()
 
 def init_app(app):
     for ext in [ma,
                 db,
-                jwt
+                jwt,
+                logging
                 ]:
         ext.init_app(app)

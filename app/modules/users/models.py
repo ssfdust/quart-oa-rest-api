@@ -1,4 +1,4 @@
-from database import (
+from extensions.flask_sqlalchemy import (
     db,
     SurrogatePK,
     Model

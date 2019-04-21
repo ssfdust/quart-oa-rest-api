@@ -3,7 +3,6 @@ from quart.views import MethodView
 from quart import current_app as app
 from quart import jsonify
 
-
 class LoginView(MethodView):
     async def get(self):
         app.logger.debug(1111)
